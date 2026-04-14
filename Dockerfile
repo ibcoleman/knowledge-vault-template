@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Claude Code CLI
 RUN npm install -g @anthropic-ai/claude-code
 
-# pm2 for bot process management
-RUN npm install -g pm2
+# pm2 for bot process management, tsx for TypeScript execution
+RUN npm install -g pm2 tsx
 
 # Bot setup
 WORKDIR /app/bot

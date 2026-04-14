@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'discord-intake',
       script: './src/bot.ts',
-      interpreter: './node_modules/.bin/tsx',
+      interpreter: 'tsx',
       cwd: __dirname,
       env: {
         NODE_ENV: 'production',

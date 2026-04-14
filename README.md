@@ -28,19 +28,23 @@ Content flows inbound only. You capture; Claude organizes; you read.
 ### 1. Clone this repo
 
 ```bash
-git clone <this-repo-url> my-vault
+git clone https://github.com/ibcoleman/knowledge-vault-template.git my-vault
 cd my-vault
 ```
 
 ### 2. Create a Discord bot
 
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
-2. Click "New Application", give it a name (e.g., "My Vault Bot")
-3. Go to **Bot** → click "Reset Token" → copy the token
-4. Under **Privileged Gateway Intents**, enable **Message Content Intent**
-5. Go to **OAuth2** → **URL Generator** → select `bot` scope → select permissions: `Read Messages/View Channels`, `Read Message History`, `Add Reactions`
-6. Copy the generated URL, open it in a browser, and add the bot to your Discord server
-7. Create a channel for captures (e.g., `#vault-inbox`) and copy its channel ID (right-click → Copy Channel ID; enable Developer Mode in Discord settings if needed)
+2. Click **New Application**, give it a name (e.g., "My Vault Bot"), click **Create**
+3. In the left sidebar, click **Bot**
+4. Click **Reset Token** → copy the token (you'll need it in step 3)
+5. Scroll down on the same Bot page to the **Privileged Gateway Intents** section and toggle **Message Content Intent** to ON, then click **Save Changes**
+6. In the left sidebar, click **Installation**
+7. Under **Install Link**, select **Discord Provided Link**
+8. Under **Default Install Settings**, in the **Guild Install** section, add the `bot` scope, then add these Bot Permissions: `Read Messages/View Channels`, `Read Message History`, `Add Reactions`
+9. Copy the install link at the top, open it in a browser, and add the bot to your Discord server
+10. In Discord, create a channel for captures (e.g., `#vault-inbox`)
+11. Copy the channel ID: right-click the channel → **Copy Channel ID** (if you don't see this option, go to Discord Settings → App Settings → Advanced → enable **Developer Mode**)
 
 ### 3. Configure environment
 
