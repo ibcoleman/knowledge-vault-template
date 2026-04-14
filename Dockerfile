@@ -19,14 +19,8 @@ COPY bot/package.json bot/package-lock.json ./
 RUN npm ci --omit=dev
 COPY bot/ ./
 
-# Vault is mounted at runtime, not baked in
-VOLUME /vault
-
-# Claude auth persists across container restarts
-VOLUME /home/node/.claude
-
-# Ensure node user can write logs
-RUN mkdir -p /app/bot/logs && chown -R node:node /app/bot
+# Ensure node user can write logs and Claude auth directory
+RUN mkdir -p /app/bot/logs /home/node/.claude && chown -R node:node /app/bot /home/node/.claude
 
 WORKDIR /vault
 
