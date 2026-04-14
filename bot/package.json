@@ -1,0 +1,20 @@
+{
+  "name": "vault-intake-bot",
+  "version": "0.1.0",
+  "description": "Discord intake bot for Knowledge Vault — captures URLs, images, files, and notes as manifest files for batch processing by Claude Code.",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/bot.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.0",
+    "dotenv": "^17.4.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  }
+}

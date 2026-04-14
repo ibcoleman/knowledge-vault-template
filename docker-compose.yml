@@ -1,0 +1,15 @@
+services:
+  vault:
+    build: .
+    env_file: .env
+    environment:
+      - VAULT_PATH=/vault
+    volumes:
+      - ./vault:/vault
+      - claude-auth:/home/node/.claude
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  claude-auth:
