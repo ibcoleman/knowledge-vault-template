@@ -25,6 +25,9 @@ VOLUME /vault
 # Claude auth persists across container restarts
 VOLUME /home/node/.claude
 
+# Ensure node user can write logs
+RUN mkdir -p /app/bot/logs && chown -R node:node /app/bot
+
 WORKDIR /vault
 
 COPY entrypoint.sh /entrypoint.sh
